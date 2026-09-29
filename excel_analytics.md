@@ -1,4 +1,4 @@
-﻿# Excel Analytics: Pivot Aggregation and Projection Questions
+# Excel Analytics: Pivot Aggregation and Projection Questions
 
 ## Objective
 
@@ -15,7 +15,7 @@ For each CSV file:
 5. Format monetary values, percentages, and dates correctly.
 6. Add slicers or filters for at least one nominal or ordinal column.
 7. For projection questions, use PivotTable results as the source for formulas, trend calculations, or Excel Forecast Sheet.
-8. Keep the analysis in Excel; charts are optional unless assigned separately.
+8. Create the required PivotCharts in the same worksheet segment as their related PivotTables, with a clear title, axis labels, legend, and data labels where useful.
 
 ---
 
@@ -29,6 +29,7 @@ File: `datasets/01_retail_customer_purchases.csv`
 4. Group `purchase_date` by month and year, then calculate monthly total `sales_amount`. Which months show the strongest sales?
 5. Project next quarter sales by using the monthly sales PivotTable and a simple moving average or Excel forecast. Which region is expected to contribute the most sales?
 6. Create a calculated field or helper column for customer age using `customer_birth_year`, then use a PivotTable to compare average `sales_amount` by age group and loyalty tier.
+7. Create a clustered column PivotChart showing total `sales_amount` by `region`, with `product_category` as the series. Add a timeline for `purchase_date` and a slicer for `loyalty_tier`. Which categories drive the leading region's sales?
 
 ---
 
@@ -42,6 +43,7 @@ File: `datasets/02_healthcare_patient_visits.csv`
 4. Group `visit_date` by month and calculate total visits and average treatment cost over time.
 5. Project next six months of visit volume using monthly visit counts from the PivotTable.
 6. Compare average `body_temperature_c` by `pain_level` and `diagnosis_category`. Which groups show elevated temperature patterns?
+7. Create a combo PivotChart showing monthly visit count as columns and average `treatment_cost` as a line on a secondary axis. Add a slicer for `diagnosis_category`. Do higher visit volumes coincide with higher average costs?
 
 ---
 
@@ -55,6 +57,7 @@ File: `datasets/03_student_learning_performance.csv`
 4. Use `examination_year` as rows and calculate yearly average `final_score` and pass rate.
 5. Project next year average `final_score` by `subject_stream` using yearly PivotTable trends.
 6. Create score bands such as 0-39, 40-59, 60-79, and 80-100, then use a PivotTable to compare score distribution across school types.
+7. Create a 100% stacked column PivotChart showing the pass/fail percentage by `engagement_level`, with a slicer for `school_type`. Which engagement level has the strongest pass-rate profile?
 
 ---
 
@@ -68,6 +71,7 @@ File: `datasets/04_employee_workforce.csv`
 4. Aggregate average `overtime_days`, `training_hours`, and `projects_completed` by `performance_rating`.
 5. Use `joining_year` to summarize employee count by year, then project workforce size for the next two years.
 6. Compare average salary and average projects completed for employees with `attrition` = Yes versus No.
+7. Create a bar PivotChart showing attrition rate by `department`, split by `job_level`. Add slicers for `performance_rating` and `job_role`. Which department-level combination needs the most attention?
 
 ---
 
@@ -81,6 +85,7 @@ File: `datasets/05_banking_customer_risk.csv`
 4. Create a helper column for loan-to-income ratio, then summarize average ratio by `risk_grade` and `defaulted`.
 5. Use `missed_payments` groups such as 0, 1-3, 4-6, 7-9, and 10-12 to compare default rates.
 6. Project potential default exposure by multiplying default rate by total `loan_amount` for each risk grade.
+7. Create a combo PivotChart showing total `loan_amount` as columns and default rate as a line by `risk_grade`. Add slicers for `account_type` and `occupation_group`. Which risk grade combines high exposure with a high default rate?
 
 ---
 
@@ -94,6 +99,7 @@ File: `datasets/06_manufacturing_quality.csv`
 4. Group `inspection_date` by month and summarize total defects and total maintenance cost.
 5. Project next quarter maintenance cost using monthly PivotTable totals.
 6. Compare defect severity distribution by plant. Which plant has the highest percentage of major or critical inspections?
+7. Create a line PivotChart showing monthly total `defects_count` and monthly total `maintenance_cost`, using a secondary axis where needed. Add slicers for `plant` and `machine_type`. Do defect spikes align with maintenance-cost increases?
 
 ---
 
@@ -107,6 +113,7 @@ File: `datasets/07_logistics_delivery_performance.csv`
 4. Aggregate average `distance_km`, total `freight_cost`, and average `delay_days` by `delivery_priority`.
 5. Use `dispatch_year` to summarize yearly shipment count and freight cost, then project next year freight cost.
 6. Create distance bands such as 0-500, 501-1500, 1501-3000, and 3000+, then compare delay performance across shipping modes.
+7. Create a combo PivotChart showing shipment count as columns and on-time delivery percentage as a line by `shipping_mode`. Add slicers for `destination_region` and `delivery_priority`. Which mode balances volume and reliability best?
 
 ---
 
@@ -117,3 +124,4 @@ File: `datasets/07_logistics_delivery_performance.csv`
 3. Compare percentage outcomes across datasets: retail discount rate, student pass rate, employee attrition rate, banking default rate, and logistics on-time rate.
 4. Build one executive summary sheet with a PivotTable output from each dataset and one short written insight for each.
 5. For each dataset, identify one metric that can be projected forward and explain which historical grouping should be used for the projection.
+6. Build an executive dashboard containing one KPI and one PivotChart from each dataset. Use consistent titles, number formats, and colors, and include slicers or timelines where they improve comparison. Which three visual findings are most important for decision-makers?
