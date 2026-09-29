@@ -1,0 +1,55 @@
+RETAIL SALES PIVOTTABLE ANALYSIS AND VISUALIZATION QUESTIONS
+
+Dataset: datasets/01_retail_sales.csv
+
+Use Excel PivotTables and PivotCharts to answer each question. Add clear chart titles, axis labels, legends, currency/percentage formatting, and data labels where useful. Use slicers or a timeline for interactive filtering.
+
+1. What are the total revenue, total cost, and total profit for each region? Create a clustered column PivotChart to compare the three measures.
+
+2. Which product category generates the highest revenue and profit in each region? Create a stacked column PivotChart with region on the axis and category as the series.
+
+3. How do monthly revenue and profit change over time? Group order_date by year and month, then create a two-line PivotChart with a timeline.
+
+4. Which sales channel produces the most revenue, profit, and units sold? Create a combo PivotChart with revenue and profit as columns and units sold as a line on a secondary axis.
+
+5. Which customer segment contributes the largest percentage of total revenue? Show values as % of Grand Total and create a doughnut PivotChart.
+
+6. What are the five best-selling products by units_sold? Create a horizontal bar PivotChart sorted from highest to lowest.
+
+7. Which five products generate the highest profit? Create a horizontal bar PivotChart and add slicers for region, category, and sales_channel.
+
+8. Are the products with the highest revenue also the products with the highest profit? Create a clustered column PivotChart comparing revenue and profit for the top 10 products by revenue.
+
+9. What is the average revenue per order in each region and customer segment? Use Average of revenue and create a clustered bar PivotChart.
+
+10. Create a helper column named profit_margin_pct using profit / revenue. Which categories and products have the highest and lowest average profit margin? Create a bar PivotChart formatted as percentages.
+
+11. Create discount bands of 0%, 1-10%, 11-20%, and Above 20%. How do total revenue, average profit, and average profit margin vary by discount band? Create a combo PivotChart.
+
+12. Does a higher discount percentage lead to more units sold? Show average units_sold by discount_pct in a column PivotChart, with category and customer_segment slicers.
+
+13. What percentage of orders are returned in each category? Create a helper column named return_flag with 1 for Yes and 0 for No, calculate Average of return_flag, and display it in a column PivotChart as return rate.
+
+14. Which sales channel and region combination has the highest return rate? Create a 100% stacked column PivotChart using returned as the series.
+
+15. How much revenue and profit are associated with returned versus non-returned orders? Create a clustered column PivotChart and add category and sales_channel slicers.
+
+16. Which payment methods are used most frequently by each customer segment? Count order_id and create a stacked bar PivotChart.
+
+17. Which payment method accounts for the greatest share of revenue? Show revenue as % of Grand Total and create a pie PivotChart.
+
+18. How does quarterly revenue compare across regions? Group order_date by year and quarter, then create a line PivotChart with one line per region.
+
+19. Which category has the strongest year-over-year revenue growth? Calculate annual revenue by category, add a year-over-year growth formula beside the PivotTable, and create a line chart from the summarized results.
+
+20. Which region has the best profitability after considering both revenue and cost? Compare Sum of revenue, Sum of cost, Sum of profit, and calculated profit margin in a PivotTable, then create a combo chart.
+
+21. What are the revenue and profit contributions of each category within each region? Show values as % of Row Total and apply a heatmap using conditional formatting.
+
+22. Which region, category, and sales channel combination produces the highest profit? Build a hierarchical PivotTable and create a stacked bar PivotChart with interactive slicers.
+
+23. How does average unit_price vary by category and product? Create a clustered bar PivotChart and use a region slicer to identify geographic pricing differences.
+
+24. Which customer segment buys the greatest number of units from each category? Create a stacked column PivotChart using Sum of units_sold.
+
+25. Build an executive retail dashboard containing KPI cards for total revenue, total profit, profit margin, units sold, order count, and return rate. Include monthly revenue and profit trends, revenue by region, profit by category, and return rate by channel, controlled by order_date, region, category, sales_channel, and customer_segment filters.
